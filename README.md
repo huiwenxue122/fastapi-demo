@@ -30,7 +30,6 @@ Whether you are new to FastAPI or learning Docker, this project is a perfect sta
 
 ## 🏗️ Project Structure
 
-'''
 fastapi-docker-starter/
 ├── main.py # FastAPI application entry
 ├── requirements.txt # Python dependencies
@@ -38,7 +37,6 @@ fastapi-docker-starter/
 ├── docker-compose.yml # (optional) Compose setup
 ├── .dockerignore # Files ignored by Docker
 └── .gitignore # Files ignored by Git
-'''
 
 
 ---
@@ -55,18 +53,21 @@ pip install -r requirements.txt
 
 # 3. Run FastAPI
 uvicorn main:app --reload
+```
 
 🐳 Run with Docker
+```
 # Build the image
 docker build -t fastapi-demo .
 
 # Run the container
 docker run -d -p 8080:80 --name fastapi-demo fastapi-demo
-
+```
 
 Then visit 👉 http://localhost:8080/docs
 
 📦 Run with Docker Compose (recommended)
+```
 docker compose up -d --build
 
 
@@ -74,7 +75,7 @@ Then check running containers:
 
 docker ps
 
-
+```
 Access the API at 👉 http://localhost:8888/docs
 
 🧰 API Example
