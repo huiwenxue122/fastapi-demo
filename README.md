@@ -79,8 +79,12 @@ docker ps
 Access the API at 👉 http://localhost:8888/docs
 
 🧰 API Example
+
 Method	Endpoint	Description
+
 GET	/	Root endpoint
+
 GET	/users	Get list of users
+
 POST	/users	Create a new user
 
