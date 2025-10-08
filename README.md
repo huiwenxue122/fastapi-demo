@@ -55,7 +55,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-🐳 Run with Docker
+## 🐳 Run with Docker
 ```
 # Build the image
 docker build -t fastapi-demo .
@@ -66,7 +66,7 @@ docker run -d -p 8080:80 --name fastapi-demo fastapi-demo
 
 Then visit 👉 http://localhost:8080/docs
 
-📦 Run with Docker Compose (recommended)
+## 📦 Run with Docker Compose (recommended)
 ```
 docker compose up -d --build
 
@@ -78,13 +78,12 @@ docker ps
 ```
 Access the API at 👉 http://localhost:8888/docs
 
-🧰 API Example
+## 🧰 API Example
 
-Method	Endpoint	Description
-
-GET	/	Root endpoint
-
-GET	/users	Get list of users
-
-POST	/users	Create a new user
+| Method | Endpoint | Description |
+|--------|-----------|-------------|
+| `GET` | `/` | Root endpoint |
+| `GET` | `/users` | Get list of users |
+| `POST` | `/users` | Create a new user |
+| `DELETE` | `/users/{id}` | Delete a user by ID |
 
