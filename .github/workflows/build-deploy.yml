@@ -2,28 +2,18 @@ name: Build and Deploy Code
 
 on:
   push:
-    branches:
-      - main
-      - another-branch
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
-      - another-branch
-      - test-branch
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-      
-      - name: pulling git repo
-        uses: actions/checkout@v3
-        with:
-          repository: user/repo
-          token: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: say hi to claire
+        uses: actions/checkout@v4
+
+      - name: Say hi to Claire
         run: echo "hi claire"
+
 
