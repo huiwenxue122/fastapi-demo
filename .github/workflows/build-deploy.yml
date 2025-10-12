@@ -6,8 +6,18 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  DOCKER_IMAGE: fastapi-demo
+  DOCKER_TAG: latest
+
 jobs:
   build-and-deploy:
+    env:
+      DATABASE_HOSTNAME: localhost
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: password
+      DATABASE_NAME: fastapi_demo
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -32,3 +42,4 @@ jobs:
           pip install pytest
           pytest
         continue-on-error: true
+
