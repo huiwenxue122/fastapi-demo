@@ -16,4 +16,14 @@ jobs:
       - name: Say hi to Claire
         run: echo "hi claire"
 
+      - name: Install python version 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: update pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
