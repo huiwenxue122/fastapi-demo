@@ -12,8 +12,9 @@ env:
 
 jobs:
   build-and-deploy:
+    environment: testing
     env:
-      DATABASE_HOSTNAME: localhost
+      DATABASE_HOSTNAME: $ { secrets.DATABASE_HOSTNAME }
       DATABASE_PORT: 5432
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: password
